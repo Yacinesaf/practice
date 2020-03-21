@@ -1,15 +1,13 @@
 import React from 'react';
-import { AppBar, IconButton, Toolbar, Button, Typography, Drawer, Divider, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import { Drawer, ListItemText, List, ListItem } from '@material-ui/core';
 
 
-function DrawerComp({open}) {
+function DrawerComp({isDrawerOpen}) {
 
 
-  console.log(open)
   return (
       <Drawer
-        open={open}
+        open={isDrawerOpen}
         variant="permanent"
       >
         <List>

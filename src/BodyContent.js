@@ -1,20 +1,24 @@
-import React, { useState } from 'react';
-import { AppBar, IconButton, Toolbar, Button, Typography, Drawer } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import DrawerComp from './DrawerComp';
+import React from 'react';
+import { Grid, Typography } from '@material-ui/core';
+import VideoPreviewWrapper from './VideoPreviewWrapper';
 
 
-function Nav() {
-  let [open, setOpen] = useState(false)
-  const opens = () => {
-    setOpen(!open)
-  }
+
+function BodyContent({ isDrawerOpen }) {
   return (
-    <div style={{backgroundColor : '#ededed', height : 'calc(100vh - 64px)'}}>
-    <Button onClick={opens}>sl</Button>
-    <DrawerComp open={open} />
+    <div style={{ backgroundColor: '#ededed', minHeight: 'calc(100vh - 64px)' }}>
+      <Grid container style={{ padding: 40 }}>
+        <Grid item xs={12}>
+          <Typography variant='h6' >Recomandations</Typography>
+        </Grid>
+        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(x => (
+          <Grid item xs={3} key={x} style={{ padding: 20 }}>
+            <VideoPreviewWrapper />
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 }
 
-export default Nav;
+export default BodyContent;
