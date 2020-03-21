@@ -12,7 +12,7 @@ function Main() {
   return (
     <div >
       <Nav drawerSwitchState={drawerSwitchState} />
-      <BodyContent isDrawerOpen={isDrawerOpen} /> 
+      <BodyContent isDrawerOpen={isDrawerOpen} drawerSwitchState={drawerSwitchState} /> 
     </div>
   );
 }

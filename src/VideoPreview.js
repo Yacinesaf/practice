@@ -6,7 +6,7 @@ function VideoPreview({img}) {
 
   return (
     <div>
-      <div style={{ backgroundImage : `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center', width: '100%', height: 200, marginBottom : 20 }} />
+      <div style={{ backgroundImage : `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center', width: '100%', height: 220, marginBottom : 20 }} />
       <div style={{display : 'flex'}}>
         <Avatar alt='dd' src={imgProfile} />
         <div style={{paddingLeft : 10}}>

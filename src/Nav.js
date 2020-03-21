@@ -10,14 +10,10 @@ import imgProfile from './Sans titre-2.png'
 import './styles.css'
 
 
-function Nav() {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const drawerSwitchState = () => {
-    setIsOpen(!isOpen);
-  };
+function Nav({drawerSwitchState}) {
 
   return (
-    <div >
+    <div>
       <AppBar position="static" color='inherit' elevation={0} >
         <Toolbar>
           <IconButton edge="start" color="inherit" aria-label="menu" onClick={drawerSwitchState}>
